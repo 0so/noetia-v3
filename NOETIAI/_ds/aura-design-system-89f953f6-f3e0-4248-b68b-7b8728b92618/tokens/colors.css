@@ -1,0 +1,68 @@
+/* ============================================================
+   AURA — COLOR TOKENS
+   Dark, cinematic, glassy. Everything sits on near-black with
+   white drawn at graded opacities. A cold blue→cyan gradient is
+   the single chromatic signature.
+   ============================================================ */
+
+:root {
+  /* --- Base canvas ------------------------------------------------ */
+  --aura-bg: #0c0c0c;            /* page background */
+  --aura-surface: #0e1014;       /* raised panels (inbox shell) */
+  --aura-surface-90: rgba(14, 16, 20, 0.9);
+
+  /* --- Ink (white drawn at opacity) ------------------------------ */
+  --aura-fg: #ffffff;            /* primary text / icons */
+  --aura-fg-70: rgba(255, 255, 255, 0.70); /* nav links */
+  --aura-fg-60: rgba(255, 255, 255, 0.60); /* body copy */
+  --aura-fg-50: rgba(255, 255, 255, 0.50); /* captions */
+  --aura-fg-45: rgba(255, 255, 255, 0.45); /* muted desc */
+  --aura-fg-40: rgba(255, 255, 255, 0.40); /* finest print */
+
+  /* --- Hairlines & fills ----------------------------------------- */
+  --aura-line: rgba(255, 255, 255, 0.10);   /* default border */
+  --aura-line-15: rgba(255, 255, 255, 0.15);/* stronger border */
+  --aura-fill: rgba(255, 255, 255, 0.05);   /* ghost surface */
+  --aura-fill-03: rgba(255, 255, 255, 0.03);/* faint chip */
+  --aura-fill-hover: rgba(255, 255, 255, 0.10);
+
+  /* --- Brand ------------------------------------------------------ */
+  --aura-brand: #3D81E3;         /* tailwind `brand` */
+  --aura-brand-selection: rgba(61, 129, 227, 0.30);
+
+  /* --- Signature gradient stops (blue night → cyan dawn) --------- */
+  --aura-grad-0: #091020;        /* deepest navy */
+  --aura-grad-1: #0B2551;        /* royal night */
+  --aura-grad-2: #A4F4FD;        /* pale ice */
+  --aura-grad-3: #00d2ff;        /* electric cyan */
+
+  /* Shiny headline gradient (left→right, mirrored, 200% size) */
+  --aura-grad-shiny: linear-gradient(
+    to right,
+    #091020 0%, #0B2551 12.5%, #A4F4FD 32.5%, #00d2ff 50%,
+    #0B2551 67.5%, #091020 87.5%, #091020 100%
+  ); /* @kind color */
+  /* Watermark gradient (single sweep) */
+  --aura-grad-watermark: linear-gradient(
+    to right, #091020 0%, #0B2551 25%, #A4F4FD 65%, #00d2ff 100%
+  ); /* @kind color */
+  /* Avatar bubble */
+  --aura-grad-avatar: linear-gradient(to bottom right, #00d2ff, #0B2551); /* @kind color */
+
+  /* --- Functional / semantic ------------------------------------- */
+  --aura-traffic-red: #ff5f57;
+  --aura-traffic-amber: #febc2e;
+  --aura-traffic-green: #28c840;
+
+  /* Inbox label dots */
+  --aura-label-work: #00d2ff;
+  --aura-label-personal: #A4F4FD;
+  --aura-label-travel: #f59e0b;
+  --aura-label-finance: #10b981;
+
+  /* Triage priority ramp (white → graphite) */
+  --aura-triage-1: #ffffff;
+  --aura-triage-2: #e5e5e5;
+  --aura-triage-3: #a3a3a3;
+  --aura-triage-4: #525252;
+}
