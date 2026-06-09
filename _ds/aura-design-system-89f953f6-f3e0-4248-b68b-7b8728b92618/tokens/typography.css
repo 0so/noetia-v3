@@ -1,0 +1,50 @@
+/* ============================================================
+   AURA — TYPOGRAPHY TOKENS
+   One family: Inter, weights 400–900. Tight tracking, low
+   line-height on display; relaxed on body. The cinematic move
+   is scale + a single shiny gradient word.
+   ============================================================ */
+
+:root {
+  /* --- Family ---------------------------------------------------- */
+  --aura-font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* --- Weights --------------------------------------------------- */
+  --aura-w-regular: 400;   /* @kind font */
+  --aura-w-medium: 500;    /* @kind font */
+  --aura-w-semibold: 600;  /* @kind font */
+  --aura-w-bold: 700;      /* @kind font */
+  --aura-w-extrabold: 800; /* @kind font */
+  --aura-w-black: 900;     /* @kind font */
+
+  /* --- Type scale (px) ------------------------------------------- */
+  --aura-text-xs: 12px;     /* menu bar, fine print */
+  --aura-text-sm: 14px;     /* nav links, body small */
+  --aura-text-base: 16px;   /* lead paragraph */
+  --aura-text-lg: 18px;     /* tier label */
+  --aura-text-2xl: 24px;
+  --aura-text-3xl: 30px;    /* section h2 (mobile) */
+  --aura-text-5xl: 48px;    /* section h2 (desktop) */
+  --aura-text-7xl: 72px;    /* hero h1 (desktop) */
+  --aura-text-watermark: 144px; /* 9rem pricing watermark */
+
+  /* --- Tracking -------------------------------------------------- */
+  --aura-track-tight: -0.025em;   /* display @kind font */
+  --aura-track-tighter: -0.05em;  /* watermark @kind font */
+  --aura-track-normal: 0;         /* @kind font */
+  --aura-track-wide: 0.05em;      /* @kind font */
+  --aura-track-widest: 0.1em;     /* kickers @kind font */
+
+  /* --- Leading --------------------------------------------------- */
+  --aura-leading-none: 0.9;    /* hero @kind font */
+  --aura-leading-tight: 1.02;  /* heads @kind font */
+  --aura-leading-snug: 1.4;    /* @kind font */
+  --aura-leading-normal: 1.5;  /* body @kind font */
+  --aura-leading-relaxed: 1.6; /* long copy @kind font */
+
+  /* --- Semantic roles ------------------------------------------- */
+  --aura-display: var(--aura-w-semibold) var(--aura-text-7xl)/var(--aura-leading-none) var(--aura-font-sans); /* @kind font */
+  --aura-heading: var(--aura-w-semibold) var(--aura-text-5xl)/var(--aura-leading-tight) var(--aura-font-sans); /* @kind font */
+  --aura-body: var(--aura-w-regular) var(--aura-text-base)/var(--aura-leading-normal) var(--aura-font-sans); /* @kind font */
+  --aura-caption: var(--aura-w-regular) var(--aura-text-xs)/var(--aura-leading-snug) var(--aura-font-sans); /* @kind font */
+}
