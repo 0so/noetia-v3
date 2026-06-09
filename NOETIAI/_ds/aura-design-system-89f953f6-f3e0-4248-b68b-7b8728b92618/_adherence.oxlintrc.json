@@ -1,0 +1,358 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/brand/**",
+              "components/buttons/**",
+              "components/controls/**",
+              "components/layout/**",
+              "components/surfaces/**",
+              "ui_kits/aura_landing/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Inter))/i]",
+        "message": "Font not provided by the design system. Available: Inter."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='AppleButton'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|full|onClick|className|style|key|ref|className|style|children)$/]",
+        "message": "<AppleButton> doesn't accept that prop. Declared props: label, full, onClick, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='AppleLogo'] > JSXAttribute > JSXIdentifier[name!=/^(?:size|className|style|key|ref|className|style|children)$/]",
+        "message": "<AppleLogo> doesn't accept that prop. Declared props: size, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BillingToggle'] > JSXAttribute > JSXIdentifier[name!=/^(?:checked|onChange|label|className|style|key|ref|className|style|children)$/]",
+        "message": "<BillingToggle> doesn't accept that prop. Declared props: checked, onChange, label, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Chip'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|className|style|key|ref|className|style|children)$/]",
+        "message": "<Chip> doesn't accept that prop. Declared props: children, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='GhostButton'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|chevron|onClick|className|style|key|ref|className|style|children)$/]",
+        "message": "<GhostButton> doesn't accept that prop. Declared props: label, chevron, onClick, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='LiquidGlassCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|radius|padding|glow|as|className|style|key|ref|className|style|children)$/]",
+        "message": "<LiquidGlassCard> doesn't accept that prop. Declared props: children, radius, padding, glow, as, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='LiquidGlassCard'] > JSXAttribute[name.name='radius'] > Literal[value!=/^(?:md|lg|xl)$/]",
+        "message": "<LiquidGlassCard> radius must be one of 'md' | 'lg' | 'xl'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='LogoMark'] > JSXAttribute > JSXIdentifier[name!=/^(?:size|fill|className|style|key|ref|className|style|children)$/]",
+        "message": "<LogoMark> doesn't accept that prop. Declared props: size, fill, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionEyebrow'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|tag|className|style|key|ref|className|style|children)$/]",
+        "message": "<SectionEyebrow> doesn't accept that prop. Declared props: label, tag, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ShinyText'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|as|animate|withFilter|className|style|key|ref|className|style|children)$/]",
+        "message": "<ShinyText> doesn't accept that prop. Declared props: children, as, animate, withFilter, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TrafficLights'] > JSXAttribute > JSXIdentifier[name!=/^(?:size|gap|className|style|key|ref|className|style|children)$/]",
+        "message": "<TrafficLights> doesn't accept that prop. Declared props: size, gap, className, style."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "AppleButton": {
+        "replaces": []
+      },
+      "AppleLogo": {
+        "replaces": []
+      },
+      "BillingToggle": {
+        "replaces": []
+      },
+      "Chip": {
+        "replaces": []
+      },
+      "GhostButton": {
+        "replaces": []
+      },
+      "LiquidGlassCard": {
+        "replaces": []
+      },
+      "LogoMark": {
+        "replaces": []
+      },
+      "SectionEyebrow": {
+        "replaces": []
+      },
+      "ShinyText": {
+        "replaces": []
+      },
+      "TrafficLights": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--aura-bg",
+      "--aura-blur-2xl",
+      "--aura-blur-md",
+      "--aura-blur-sm",
+      "--aura-blur-xl",
+      "--aura-body",
+      "--aura-brand",
+      "--aura-brand-selection",
+      "--aura-caption",
+      "--aura-container",
+      "--aura-container-prose",
+      "--aura-display",
+      "--aura-dur-base",
+      "--aura-dur-fast",
+      "--aura-dur-slow",
+      "--aura-ease-out",
+      "--aura-ease-standard",
+      "--aura-fg",
+      "--aura-fg-40",
+      "--aura-fg-45",
+      "--aura-fg-50",
+      "--aura-fg-60",
+      "--aura-fg-70",
+      "--aura-fill",
+      "--aura-fill-03",
+      "--aura-fill-hover",
+      "--aura-font-sans",
+      "--aura-glass-bg",
+      "--aura-glass-border",
+      "--aura-glass-inset",
+      "--aura-glow-top",
+      "--aura-grad-0",
+      "--aura-grad-1",
+      "--aura-grad-2",
+      "--aura-grad-3",
+      "--aura-grad-avatar",
+      "--aura-grad-shiny",
+      "--aura-grad-watermark",
+      "--aura-guide-offset",
+      "--aura-gutter",
+      "--aura-heading",
+      "--aura-hit-min",
+      "--aura-icon-btn",
+      "--aura-label-finance",
+      "--aura-label-personal",
+      "--aura-label-travel",
+      "--aura-label-work",
+      "--aura-leading-none",
+      "--aura-leading-normal",
+      "--aura-leading-relaxed",
+      "--aura-leading-snug",
+      "--aura-leading-tight",
+      "--aura-line",
+      "--aura-line-15",
+      "--aura-menu-btn",
+      "--aura-radius-full",
+      "--aura-radius-lg",
+      "--aura-radius-md",
+      "--aura-radius-pill",
+      "--aura-radius-pricing",
+      "--aura-radius-sm",
+      "--aura-radius-xl",
+      "--aura-section-y",
+      "--aura-section-y-lg",
+      "--aura-shadow-btn-hover",
+      "--aura-shadow-pricing",
+      "--aura-shiny-dur",
+      "--aura-space-1",
+      "--aura-space-10",
+      "--aura-space-12",
+      "--aura-space-16",
+      "--aura-space-2",
+      "--aura-space-20",
+      "--aura-space-28",
+      "--aura-space-3",
+      "--aura-space-4",
+      "--aura-space-5",
+      "--aura-space-6",
+      "--aura-space-8",
+      "--aura-surface",
+      "--aura-surface-90",
+      "--aura-text-2xl",
+      "--aura-text-3xl",
+      "--aura-text-5xl",
+      "--aura-text-7xl",
+      "--aura-text-base",
+      "--aura-text-lg",
+      "--aura-text-sm",
+      "--aura-text-watermark",
+      "--aura-text-xs",
+      "--aura-track-normal",
+      "--aura-track-tight",
+      "--aura-track-tighter",
+      "--aura-track-wide",
+      "--aura-track-widest",
+      "--aura-traffic-amber",
+      "--aura-traffic-green",
+      "--aura-traffic-red",
+      "--aura-triage-1",
+      "--aura-triage-2",
+      "--aura-triage-3",
+      "--aura-triage-4",
+      "--aura-w-black",
+      "--aura-w-bold",
+      "--aura-w-extrabold",
+      "--aura-w-medium",
+      "--aura-w-regular",
+      "--aura-w-semibold"
+    ],
+    "tokenKinds": {
+      "--aura-bg": "color",
+      "--aura-surface": "color",
+      "--aura-surface-90": "color",
+      "--aura-fg": "color",
+      "--aura-fg-70": "color",
+      "--aura-fg-60": "color",
+      "--aura-fg-50": "color",
+      "--aura-fg-45": "color",
+      "--aura-fg-40": "color",
+      "--aura-line": "color",
+      "--aura-line-15": "color",
+      "--aura-fill": "color",
+      "--aura-fill-03": "color",
+      "--aura-fill-hover": "color",
+      "--aura-brand": "color",
+      "--aura-brand-selection": "color",
+      "--aura-grad-0": "color",
+      "--aura-grad-1": "color",
+      "--aura-grad-2": "color",
+      "--aura-grad-3": "color",
+      "--aura-grad-shiny": "color",
+      "--aura-grad-watermark": "color",
+      "--aura-grad-avatar": "color",
+      "--aura-traffic-red": "color",
+      "--aura-traffic-amber": "color",
+      "--aura-traffic-green": "color",
+      "--aura-label-work": "color",
+      "--aura-label-personal": "color",
+      "--aura-label-travel": "color",
+      "--aura-label-finance": "color",
+      "--aura-triage-1": "color",
+      "--aura-triage-2": "color",
+      "--aura-triage-3": "color",
+      "--aura-triage-4": "color",
+      "--aura-font-sans": "font",
+      "--aura-w-regular": "font",
+      "--aura-w-medium": "font",
+      "--aura-w-semibold": "font",
+      "--aura-w-bold": "font",
+      "--aura-w-extrabold": "font",
+      "--aura-w-black": "font",
+      "--aura-text-xs": "font",
+      "--aura-text-sm": "font",
+      "--aura-text-base": "font",
+      "--aura-text-lg": "font",
+      "--aura-text-2xl": "font",
+      "--aura-text-3xl": "font",
+      "--aura-text-5xl": "font",
+      "--aura-text-7xl": "font",
+      "--aura-text-watermark": "font",
+      "--aura-track-tight": "spacing",
+      "--aura-track-tighter": "spacing",
+      "--aura-track-normal": "font",
+      "--aura-track-wide": "font",
+      "--aura-track-widest": "spacing",
+      "--aura-leading-none": "font",
+      "--aura-leading-tight": "font",
+      "--aura-leading-snug": "font",
+      "--aura-leading-normal": "font",
+      "--aura-leading-relaxed": "font",
+      "--aura-display": "font",
+      "--aura-heading": "font",
+      "--aura-body": "font",
+      "--aura-caption": "font",
+      "--aura-space-1": "spacing",
+      "--aura-space-2": "spacing",
+      "--aura-space-3": "spacing",
+      "--aura-space-4": "spacing",
+      "--aura-space-5": "spacing",
+      "--aura-space-6": "spacing",
+      "--aura-space-8": "spacing",
+      "--aura-space-10": "spacing",
+      "--aura-space-12": "spacing",
+      "--aura-space-16": "spacing",
+      "--aura-space-20": "spacing",
+      "--aura-space-28": "spacing",
+      "--aura-section-y": "spacing",
+      "--aura-section-y-lg": "spacing",
+      "--aura-container": "spacing",
+      "--aura-container-prose": "spacing",
+      "--aura-guide-offset": "spacing",
+      "--aura-gutter": "spacing",
+      "--aura-radius-sm": "radius",
+      "--aura-radius-md": "radius",
+      "--aura-radius-lg": "radius",
+      "--aura-radius-xl": "radius",
+      "--aura-radius-pill": "radius",
+      "--aura-radius-pricing": "radius",
+      "--aura-radius-full": "radius",
+      "--aura-icon-btn": "spacing",
+      "--aura-menu-btn": "spacing",
+      "--aura-hit-min": "spacing",
+      "--aura-blur-sm": "other",
+      "--aura-blur-md": "other",
+      "--aura-blur-xl": "other",
+      "--aura-blur-2xl": "other",
+      "--aura-glass-bg": "color",
+      "--aura-glass-inset": "spacing",
+      "--aura-glass-border": "color",
+      "--aura-shadow-btn-hover": "shadow",
+      "--aura-shadow-pricing": "shadow",
+      "--aura-glow-top": "color",
+      "--aura-ease-out": "other",
+      "--aura-ease-standard": "other",
+      "--aura-dur-fast": "other",
+      "--aura-dur-base": "other",
+      "--aura-dur-slow": "other",
+      "--aura-shiny-dur": "other"
+    },
+    "fontFamilies": [
+      "Inter"
+    ]
+  }
+}
